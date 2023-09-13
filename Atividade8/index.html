@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa de Filme</title>
+</head>
+<body>
+    <h1>Pesquisa de Filme</h1>
+    <button onclick="gerarDadosAleatorios()">Gerar Dados Aleatórios</button>
+    <br><br>
+    Idade: <input type="number" id="idade"><br>
+    Sexo: 
+    <input type="radio" name="sexo" value="homem">Homem
+    <input type="radio" name="sexo" value="mulher">Mulher
+    <br>
+    Opinião:
+    <select id="opiniao">
+        <option value="4">Ótimo</option>
+        <option value="3">Bom</option>
+        <option value="2">Regular</option>
+        <option value="1">Péssimo</option>
+    </select>
+    <br><br>
+    <button onclick="adicionarResposta()">Adicionar Resposta</button>
+    <br><br>
+    <h2>Resultados:</h2>
+    <p>Média de Idade: <span id="mediaIdade">-</span></p>
+    <p>Pessoa mais Velha: <span id="maisVelha">-</span></p>
+    <p>Pessoa mais Nova: <span id="maisNova">-</span></p>
+    <p>Pessoas que responderam Péssimo: <span id="pessimoCount">-</span></p>
+    <p>Porcentagem de Ótimo e Bom: <span id="otimoBomPercentage">-</span></p>
+    <p>Número de Homens: <span id="homensCount">-</span></p>
+    <p>Número de Mulheres: <span id="mulheresCount">-</span></p>
+    <script src="script.js"></script>
+</body>
+</html>
