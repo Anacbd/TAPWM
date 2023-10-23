@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Programação</title>
+</head>
+<body>
+
+<script>
+    // Função construtora para Retângulo
+    function Retangulo(base, altura) {
+        this.base = base;
+        this.altura = altura;
+        this.calcularArea = function() {
+            return this.base * this.altura;
+        };
+    }
+
+    // Criar um objeto Retângulo e calcular a área
+    const meuRetangulo = new Retangulo(5, 10);
+    const areaRetangulo = meuRetangulo.calcularArea();
+    console.log("Área do Retângulo:", areaRetangulo);
+
+    // Função construtora para Conta
+    function Conta(nomeCorrentista, banco, numeroConta, saldo) {
+        this.nomeCorrentista = nomeCorrentista;
+        this.banco = banco;
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+    }
+
+    // Função construtora para Conta Corrente com Saldo Especial
+    function ContaCorrenteComSaldoEspecial(nomeCorrentista, banco, numeroConta, saldo, limite) {
+        Conta.call(this, nomeCorrentista, banco, numeroConta, saldo);
+        this.limite = limite;
+    }
+
+    // Função construtora para Conta Poupança com Juros e Data de Vencimento
+    function ContaPoupancaComJurosEDataVencimento(nomeCorrentista, banco, numeroConta, saldo, taxaJuros, dataVencimento) {
+        Conta.call(this, nomeCorrentista, banco, numeroConta, saldo);
+        this.taxaJuros = taxaJuros;
+        this.dataVencimento = dataVencimento;
+    }
+
+    // Criar objetos de Conta Corrente e Conta Poupança
+    const minhaContaCorrente = new ContaCorrenteComSaldoEspecial("João", "Banco A", "12345", 5000, 1000);
+    const minhaContaPoupanca = new ContaPoupancaComJurosEDataVencimento("Maria", "Banco B", "54321", 10000, 0.03, "30/11/2023");
+
+    console.log("Conta Corrente:", minhaContaCorrente);
+    console.log("Conta Poupança:", minhaContaPoupanca);
+</script>
+
+</body>
+</html>
