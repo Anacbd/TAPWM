@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformar texto</title>
+</head>
+<body>
+<div id="principal" width="200" height="200" align="center">
+    <label for="idTexto">Texto:</label>
+    <input type="text" id="idTexto" size="52">
+    <br>
+    <input type="checkbox" id="transformarMaiusculas" onchange="transformarTexto(this, document.getElementById('transformarMinusculas'))">
+    <label for="transformarMaiusculas">Transformar em maiúsculas</label>
+    <br>
+    <input type="checkbox" id="transformarMinusculas" onchange="transformarTexto(document.getElementById('transformarMaiusculas'), this)">
+    <label for="transformarMinusculas">Transformar em minúsculas</label>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
