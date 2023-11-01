@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para o cabeçalho */
+h1 {
+    background-color: #b80000;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilo para o rótulo e seleção de cursos */
+label, select {
+    margin: 10px;
+}
+
+/* Estilo para o botão "Calcular" */
+button {
+    background-color: #b80000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b80000;
+}
+
+/* Estilo para as janelas pop-up */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Estilo para o conteúdo das janelas pop-up */
+body[onload] {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
