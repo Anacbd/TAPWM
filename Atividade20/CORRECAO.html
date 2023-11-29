@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <head>
+        <title>CORRECAO</title>
+    </head>
+    <body>
+        <script>
+    //Questão 1
+    //var ou const
+    var ObjLivro1 = {
+        Titulo : "Dom Casmurro",
+        Autor : "Machado de Assis"
+    }
+
+    var ObjLivro2 = {};
+    ObjLivro2.Titulo = "Dom Casmurro";
+    ObjLivro2.Autor = "Machado de Assis";
+
+    var ObjLivro3 = new Object();
+    ObjLivro3.Titulo = "Dom Casmurro";
+    Objlivro3.Autor =  "Machado de Assis";
+
+    //definindo a funcao construtora Livro
+    function Livro(_Titulo, _Autor)
+    {
+        this.Titulo = _Titulo;
+        this.Autor = _Autor;
+    }
+    var objLivro4 = new Livro('Dom Casmurro', "Machado de Assis");
+
+    //Definindo a classe Livro1
+    class Livro1 {
+        constructor(titulo, autor) {
+            this.titulo = titulo;
+            this.autor = autor;
+        }
+    }
+    const objLivro5 = new Livro1("Título do Livro", "Autor do Livro");
+
+    //Questão 2
+    var i = 1 + "2" + 3;
+    for (j = 0; j < 10; j++) {
+        alert(`${i}${j}`);
+        if (j === 5)
+            break; }
+    //Resposta:
+    //1230
+    //1231
+    //1232
+    //1233
+    //1234
+    //1235
+
+    //Questão 3
+    var novoArray = [3, 1, 24, 32, 10, 15, 2];
+    novoArray.sort();
+    novoArray.reverse();
+    console. log (novoArray);
+    //Resposta: 32 3 24 2 15 10 1
+
+    //Questão 4
+    funcao1 = function(n) {
+    return (Math.pow(n, 3));
+    }
+    funcao2 = function(n1, n2) {
+    return funcao1 (Math. min(n1, n2));
+    funcao3 = function(x,y) {
+    return funcao2(x,y);
+    var penultimo = prompt("Digite o penúltimo digito do seu ra"); 
+    var ultimo = prompt("Digite o último digito do seu ra");
+    alert(funcao3 (penúltimo, ultimo);
+    //Resposta: 1
+
+    //Questão 5
+    function Ordena(n1, n2, n3) {
+        var matriz = [n1, n2, n3];
+        matriz.sort(function(a,b) {b-a});
+        return matriz;
+    }
+ 
+    function ordenarDecrescente (a,b,c){
+        let numeros = [a,b,c];
+        numeros.sort((x,y) => y - x);
+        return numeros;
+    }
+ 
+    function Ordena2(n1, n2, n3){
+        var matriz = [n1, n2, n3];
+        matriz.sort(function(a,b) {a-b});
+        matriz.reverse();
+        return matriz;
+    }
+    alert(Ordena2(5,2,2));
+
+    function Ordena3(n1,n2,n3) {
+        let maior = Math.max(n1, n2, n3);
+        let menor = Math.min(n1, n2, n3);
+        let meio;
+        if (n1 !== maior && n1 !==menor) {
+            meio = n1;
+        } else if (n2 !== maior && n2 !== menor) {
+            meio = n2;
+        } else {
+            meio = n3;
+        }
+        return `${maior}${meio}${menor}`;
+        }
+    }
+
+    //Questão 6
+    var texto = '{"descricao:": "Produto A", "codigo"}'
+    var objeto = JSON.parse(texto);
+    alert(objeto.descricao+" "+objeto.codigo);
+    //
+    alert(`${objeto.descricao} ${objeto.codigo}`)
+
+    //Questão 7
+    var j;
+    var i=0;
+    var y=i/0;
+    var z= 12/i;
+    var w=null;
+    console.log(j); //undefined
+    console.log(y); //nan
+    console.log(z); //nan
+    console.log(w); //null
+
+    //Questão 8
+    var numero1=33;
+    var numero2="33";
+    var numero3 = new String("33");
+    console.log(numero2==numero3); 
+    console.log(numero2===numero3);
+    //e) Nenhuma das alternativas
+
+    //Questão 9
+    var entrada = 1 + 2 + "3" + 4;
+    var saída = "";
+    for (var i = 0; i < 5; i++) {
+        saída += entrada + i + " ";
+    }
+    alert(saída);
+    //3340
+    //3341
+    //3342
+    //3343
+    //3344
+
+    //Questão 10
+    <form name="formulario1">
+    <input name="idNome" type="text" id="idNome" value="teste">
+    </form>
+    //Quais alerts irão mostrar o valor que for digitado no Input?
+    alert("1 " + document. formulario 1. elements[0]. value);
+    alert("2" + document. forms.formulario1. elements. idNome. value);
+    alert("3" + document. forms.formulario1. elements[0]. value);
+    alert("4 " + document.getElementByld ("idNome"));
+    alert("5 " + document forms.formulario1. elements["id Nome"] value);
+    alert("6 " + document.getElementByld("idNome"). value);
+    alert("7 " + document. getElementByTagName("idNome"));
+    alert("8 " + document.forms getElementByName("idNome"));
+    alert("9 " + document.getElementByName("idNome"). value);
+    alert("10 " + document.getAttribute ("name"));
+    //c) Somente 1, 2, 3, 5, 6
+
+    //Questão 11
+    //Resposta:
+    //1
+    //title
+    //form
+    //1
+    //4
+
+    //Questão 12
+    //Resposta:
+    //document
+    //location
+    //history
+    //navigator
+    //anchor
+    //image
+    //link
+    //form
+        </script>
+    </body>
+
